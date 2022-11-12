@@ -24,7 +24,7 @@ test <- read_html(url) %>% #scrape the movie title from imdb site
   html_nodes(".lister-item-header > a") %>%
   html_text
 
-df <- data.frame(matrix( primaryTitle = unlist(test), nrow=25, byrow=TRUE),stringsAsFactors=FALSE)
+df <- data.frame(matrix(unlist(test), nrow=25, byrow=TRUE),stringsAsFactors=FALSE)
 df$tconst <- tconst
 colnames(df) <- 'primaryTitle' #create df of titles and tconst scraped from imdb
 

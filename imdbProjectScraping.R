@@ -5,6 +5,7 @@ install.packages('R.utils')
 setwd("/Users/ianveilleux/repos/btma431/Group Assignment") #set your WD to where your IMDB files are
 
 ##### Download the 'title.ratings.tsv.gz' and 'title.basics.tsv.gz' from https://www.imdb.com/interfaces/
+## note: this will take a while
 names<-as.data.frame(fread('title.basics.tsv.gz')) #movie names and info
 ratings<-as.data.frame(fread('title.ratings.tsv.gz')) #movie ratings
 
